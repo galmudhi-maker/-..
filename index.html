@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102B29">
+  <meta name="description" content="جزيء - منصة رقمية لاستكشاف المركبات الكيميائية وتحليل خصائصها وبنيتها الجزيئية.">
+  <title>جُزيء | JOZAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+</head>
+<body>
+
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" data-page="home">
+      <span class="brand-symbol">J</span>
+      <span>
+        <strong>جُزيء</strong>
+        <small>JOZAI LAB</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="القائمة">☰</button>
+
+    <nav class="navigation" id="navigation">
+      <button class="nav-link active" data-page="home">الرئيسية</button>
+      <button class="nav-link" data-page="explorer">مستكشف المركبات</button>
+      <button class="nav-link" data-page="compare">المقارنة</button>
+      <button class="nav-link" data-page="lab">مختبر التفاعلات</button>
+      <button class="nav-link" data-page="analytics">التحليلات</button>
+    </nav>
+
+    <div class="header-status">
+      <span class="status-dot"></span>
+      <span>مختبر رقمي</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section class="page active" id="home">
+
+      <div class="hero">
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            استكشف العالم غير المرئي
+          </div>
+
+          <h1>
+            ما وراء الذرات<br>
+            <span>عالم من الأسرار.</span>
+          </h1>
+
+          <p>
+            اكتشف المركبات الكيميائية، واستكشف بنيتها الجزيئية،
+            وحلل خصائصها، وافهم العلاقات التي تربط بين تركيبها وسلوكها.
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-btn" data-go="explorer">
+              ابدأ الاستكشاف <span>←</span>
+            </button>
+            <button class="secondary-btn" data-go="lab">
+              ادخل المختبر
+            </button>
+          </div>
+
+          <div class="hero-note">
+            <span class="status-dot"></span>
+            منصة لاستكشاف الكيمياء بطريقة تفاعلية
+          </div>
+        </div>
+
+        <div class="molecule-scene">
+          <div class="scene-ring ring-one"></div>
+          <div class="scene-ring ring-two"></div>
+          <div class="scene-ring ring-three"></div>
+          <div class="scene-label label-top">MOLECULAR WORLD</div>
+
+          <div class="molecule-art">
+            <span class="bond bond-a"></span>
+            <span class="bond bond-b"></span>
+            <span class="bond bond-c"></span>
+            <span class="bond bond-d"></span>
+            <span class="atom atom-center">C</span>
+            <span class="atom atom-left">O</span>
+            <span class="atom atom-right">H</span>
+            <span class="atom atom-top">N</span>
+            <span class="atom atom-bottom">H</span>
+          </div>
+
+          <div class="scene-label label-bottom">ATOMS · BONDS · DISCOVERY</div>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">DISCOVER MORE</span>
+          <h2>ماذا يمكنك أن تفعل؟</h2>
+        </div>
+        <p>أدوات تجمع الاستكشاف والتحليل والمقارنة في مكان واحد.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card" data-go="explorer">
+          <div class="feature-icon">⌕</div>
+          <span class="feature-number">01 / EXPLORE</span>
+          <h3>استكشف المركبات</h3>
+          <p>ابحث عن مركب كيميائي واكتشف صيغته وخصائصه وبنيته.</p>
+          <span class="feature-arrow">←</span>
+        </article>
+
+        <article class="feature-card" data-go="compare">
+          <div class="feature-icon">⇄</div>
+          <span class="feature-number">02 / COMPARE</span>
+          <h3>قارن الخصائص</h3>
+          <p>قارن بين مركبين وافهم أوجه التشابه والاختلاف.</p>
+          <span class="feature-arrow">←</span>
+        </article>
+
+        <article class="feature-card" data-go="lab">
+          <div class="feature-icon">⚗</div>
+          <span class="feature-number">03 / LAB</span>
+          <h3>مختبر التفاعلات</h3>
+          <p>استكشف معادلات كيميائية مختارة ونواتجها.</p>
+          <span class="feature-arrow">←</span>
+        </article>
+
+        <article class="feature-card" data-go="analytics">
+          <div class="feature-icon">⌁</div>
+          <span class="feature-number">04 / ANALYTICS</span>
+          <h3>لوحة التحليلات</h3>
+          <p>تابع المركبات التي استكشفتها وبياناتها المسجلة.</p>
+          <span class="feature-arrow">←</span>
+        </article>
+      </div>
+
+      <div class="quote-strip">
+        <span>“</span>
+        <p>كل جزيء يحمل قصة، وكل رابطة تكشف جزءًا من أسرار المادة.</p>
+        <small>JOZAI · CHEMISTRY EXPLORATION</small>
+      </div>
+
+    </section>
+
+    <!-- EXPLORER -->
+    <section class="page" id="explorer">
+
+      <div class="page-heading">
+        <span class="section-kicker">MOLECULE EXPLORER</span>
+        <h1>مستكشف <span>المركبات</span></h1>
+        <p>ابحث باسم المركب أو صيغته الكيميائية لاستكشاف بياناته.</p>
+      </div>
+
+      <div class="search-panel">
+        <div class="search-box">
+          <span>⌕</span>
+          <input id="compoundSearch" type="text" placeholder="مثال: Water أو Caffeine أو Ethanol">
+          <button id="searchBtn" class="primary-btn">بحث</button>
+        </div>
+        <div class="quick-search">
+          <span>جرّب:</span>
+          <button data-search="Water">Water</button>
+          <button data-search="Ethanol">Ethanol</button>
+          <button data-search="Glucose">Glucose</button>
+          <button data-search="Caffeine">Caffeine</button>
+          <button data-search="Acetic acid">Acetic acid</button>
+        </div>
+      </div>
+
+      <div id="searchMessage" class="message-area">
+        اكتب اسم مركب كيميائي وابدأ الاستكشاف.
+      </div>
+
+      <div id="compoundResult" class="result-layout hidden">
+
+        <div class="result-main">
+          <div class="result-title">
+            <div>
+              <span class="section-kicker">COMPOUND PROFILE</span>
+              <h2 id="compoundName">اسم المركب</h2>
+              <p id="compoundIupac">الاسم العلمي</p>
+            </div>
+            <span class="result-tag">CHEMICAL DATA</span>
+          </div>
+
+          <div class="formula-display">
+            <span>الصيغة الجزيئية</span>
+            <strong id="compoundFormula">—</strong>
+          </div>
+
+          <div class="properties-grid">
+            <div class="property-card">
+              <span>الكتلة المولية</span>
+              <strong id="compoundWeight">—</strong>
+              <small>g/mol</small>
+            </div>
+            <div class="property-card">
+              <span>رقم المركب CID</span>
+              <strong id="compoundCID">—</strong>
+              <small>PubChem</small>
+            </div>
+            <div class="property-card">
+              <span>عدد الذرات</span>
+              <strong id="compoundAtoms">—</strong>
+              <small>ذرة</small>
+            </div>
+            <div class="property-card">
+              <span>عدد الروابط</span>
+              <strong id="compoundBonds">—</strong>
+              <small>رابطة</small>
+            </div>
+          </div>
+
+          <div class="data-panel">
+            <div class="panel-heading">
+              <h3>معلومات إضافية</h3>
+              <span>DATA PROFILE</span>
+            </div>
+            <div class="data-row">
+              <span>الصيغة الجزيئية</span>
+              <strong id="detailFormula">—</strong>
+            </div>
+            <div class="data-row">
+              <span>الكتلة المولية</span>
+              <strong id="detailWeight">—</strong>
+            </div>
+            <div class="data-row">
+              <span>الاسم النظامي</span>
+              <strong id="detailIupac">—</strong>
+            </div>
+            <div class="data-row">
+              <span>مصدر البيانات</span>
+              <strong>PubChem</strong>
+            </div>
+          </div>
+
+          <button id="saveCompound" class="secondary-btn full-btn">
+            + إضافة إلى سجل الاستكشاف
+          </button>
+        </div>
+
+        <div class="viewer-card">
+          <div class="panel-heading">
+            <div>
+              <span class="section-kicker">3D MOLECULAR MODEL</span>
+              <h3>البنية الجزيئية</h3>
+            </div>
+            <span class="viewer-indicator">3D</span>
+          </div>
+          <div id="moleculeViewer" class="molecule-viewer">
+            <div class="viewer-placeholder">
+              <span>✧</span>
+              <p>سيظهر النموذج الجزيئي هنا</p>
+            </div>
+          </div>
+          <p class="viewer-hint">يمكنك تدوير النموذج وتكبيره بإصبعك أو بالفأرة.</p>
+        </div>
+
+      </div>
+
+      <div class="source-note">
+        البيانات الكيميائية تُجلب من قاعدة PubChem التابعة للمركز الوطني لمعلومات التقانة الحيوية.
+        قد لا تتوفر بنية ثلاثية الأبعاد لكل المركبات.
+        <a href="https://pubchem.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">زيارة المصدر ↗</a>
+      </div>
+
+    </section>
+
+    <!-- COMPARE -->
+    <section class="page" id="compare">
+
+      <div class="page-heading">
+        <span class="section-kicker">MOLECULAR COMPARISON</span>
+        <h1>قارن <span>المركبات</span></h1>
+        <p>اختر مركبين كيميائيين واكتشف الفروقات بين خصائصهما.</p>
+      </div>
+
+      <div class="compare-inputs">
+        <div class="compare-input-card">
+          <label for="compareOne">المركب الأول</label>
+          <input id="compareOne" type="text" value="Water" placeholder="اسم المركب">
+        </div>
+        <div class="compare-symbol">VS</div>
+        <div class="compare-input-card">
+          <label for="compareTwo">المركب الثاني</label>
+          <input id="compareTwo" type="text" value="Ethanol" placeholder="اسم المركب">
+        </div>
+      </div>
+
+      <button id="compareBtn" class="primary-btn compare-action">ابدأ المقارنة ←</button>
+      <div id="compareMessage" class="message-area"></div>
+
+      <div id="compareResult" class="comparison-result hidden">
+        <div class="comparison-top">
+          <div class="comparison-name">
+            <span>المركب الأول</span>
+            <h3 id="compareNameOne">—</h3>
+            <strong id="compareFormulaOne">—</strong>
+          </div>
+          <div class="comparison-name">
+            <span>المركب الثاني</span>
+            <h3 id="compareNameTwo">—</h3>
+            <strong id="compareFormulaTwo">—</strong>
+          </div>
+        </div>
+
+        <div class="comparison-table">
+          <div class="comparison-row comparison-header">
+            <span>الخاصية</span>
+            <span>الأول</span>
+            <span>الثاني</span>
+          </div>
+          <div class="comparison-row">
+            <span>الكتلة المولية (g/mol)</span>
+            <strong id="compareWeightOne">—</strong>
+            <strong id="compareWeightTwo">—</strong>
+          </div>
+          <div class="comparison-row">
+            <span>عدد الذرات</span>
+            <strong id="compareAtomsOne">—</strong>
+            <strong id="compareAtomsTwo">—</strong>
+          </div>
+          <div class="comparison-row">
+            <span>عدد الروابط</span>
+            <strong id="compareBondsOne">—</strong>
+            <strong id="compareBondsTwo">—</strong>
+          </div>
+          <div class="comparison-row">
+            <span>عدد الذرات المختلفة</span>
+            <strong id="compareElementsOne">—</strong>
+            <strong id="compareElementsTwo">—</strong>
+          </div>
+        </div>
+
+        <div class="analysis-card">
+          <span class="section-kicker">COMPARISON INSIGHT</span>
+          <h3>ملخص المقارنة</h3>
+          <p id="comparisonInsight">—</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- LAB -->
+    <section class="page" id="lab">
+
+      <div class="page-heading">
+        <span class="section-kicker">REACTION LAB</span>
+        <h1>مختبر <span>التفاعلات</span></h1>
+        <p>استكشف معادلات كيميائية مختارة، وشاهد المتفاعلات والنواتج.</p>
+      </div>
+
+      <div class="lab-intro">
+        <div class="lab-symbol">⚗</div>
+        <div>
+          <h3>من المتفاعلات إلى النواتج</h3>
+          <p>اختر تفاعلًا من القائمة لعرض معادلته الموزونة وشرح مبسط له.</p>
+        </div>
+      </div>
+
+      <div class="reaction-list" id="reactionList">
+        <button class="reaction-option active" data-reaction="0">
+          <span>01</span>
+          <span>تكوين الماء</span>
+          <small>اتحاد</small>
+        </button>
+        <button class="reaction-option" data-reaction="1">
+          <span>02</span>
+          <span>احتراق الميثان</span>
+          <small>احتراق</small>
+        </button>
+        <button class="reaction-option" data-reaction="2">
+          <span>03</span>
+          <span>تحلل فوق أكسيد الهيدروجين</span>
+          <small>تحلل</small>
+        </button>
+        <button class="reaction-option" data-reaction="3">
+          <span>04</span>
+          <span>تعادل الحمض والقاعدة</span>
+          <small>تعادل</small>
+        </button>
+      </div>
+
+      <div class="reaction-display">
+        <span class="section-kicker">REACTION EQUATION</span>
+        <h2 id="reactionTitle">تكوين الماء</h2>
+        <div class="equation" id="reactionEquation">
+          2H₂ + O₂ → 2H₂O
+        </div>
+        <div class="reaction-details">
+          <div>
+            <span>نوع التفاعل</span>
+            <strong id="reactionType">اتحاد</strong>
+          </div>
+          <div>
+            <span>المتفاعلات</span>
+            <strong id="reactionReactants">الهيدروجين والأكسجين</strong>
+          </div>
+          <div>
+            <span>النواتج</span>
+            <strong id="reactionProducts">الماء</strong>
+          </div>
+        </div>
+        <div class="reaction-explanation">
+          <strong>التفسير العلمي</strong>
+          <p id="reactionExplanation">—</p>
+        </div>
+        <div class="balance-status">
+          <span class="status-dot"></span>
+          <span id="balanceText">المعادلة موزونة وفق قانون حفظ الكتلة.</span>
+        </div>
+      </div>
+
+      <p class="lab-disclaimer">
+        هذه محاكاة تعليمية لعرض معادلات محددة، وليست تجربة مخبرية فعلية أو محاكاة حركية للتفاعل.
+      </p>
+
+    </section>
+
+    <!-- ANALYTICS -->
+    <section class="page" id="analytics">
+
+      <div class="page-heading">
+        <span class="section-kicker">EXPLORATION ANALYTICS</span>
+        <h1>لوحة <span>التحليلات</span></h1>
+        <p>ملخص نشاطك في استكشاف المركبات الكيميائية.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span>المركبات المحفوظة</span>
+          <strong id="statSaved">0</strong>
+          <small>COMPOUNDS</small>
+        </div>
+        <div class="stat-card">
+          <span>عمليات البحث</span>
+          <strong id="statSearches">0</strong>
+          <small>SEARCHES</small>
+        </div>
+        <div class="stat-card">
+          <span>عمليات المقارنة</span>
+          <strong id="statComparisons">0</strong>
+          <small>COMPARISONS</small>
+        </div>
+      </div>
+
+      <div class="analytics-layout">
+        <div class="data-panel history-panel">
+          <div class="panel-heading">
+            <h3>سجل المركبات</h3>
+            <button id="clearHistory" class="text-btn">مسح السجل</button>
+          </div>
+          <div id="historyList" class="history-list">
+            <div class="empty-state">لم تتم إضافة مركبات بعد.</div>
+          </div>
+        </div>
+
+        <div class="data-panel">
+          <div class="panel-heading">
+            <h3>ملخص النشاط</h3>
+            <span>ACTIVITY</span>
+          </div>
+          <div class="activity-chart">
+            <div class="activity-bar" style="--bar-height:25%">
+              <span></span><small>بحث</small>
+            </div>
+            <div class="activity-bar" style="--bar-height:55%">
+              <span></span><small>تحليل</small>
+            </div>
+            <div class="activity-bar" style="--bar-height:80%">
+              <span></span><small>مقارنة</small>
+            </div>
+            <div class="activity-bar" style="--bar-height:40%">
+              <span></span><small>استكشاف</small>
+            </div>
+          </div>
+          <p class="chart-caption">رسم توضيحي لأنواع وظائف المنصة، وليس قياسًا إحصائيًا لبيانات فعلية.</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="brand-symbol">J</span>
+      <strong>جُزيء | JOZAI</strong>
+    </div>
+    <p>نكتشف ما لا تراه العين، ونفهم ما تكشفه الجزيئات.</p>
+    <div class="footer-bottom">
+      <span>© 2026 JOZAI · مشروع ابتكاري</span>
+      <span>CHEMISTRY · TECHNOLOGY · DISCOVERY</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
